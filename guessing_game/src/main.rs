@@ -6,7 +6,7 @@ fn main() {
 
     println!("Guess the number!");
 
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    let mut secret_number = rand::thread_rng().gen_range(1..=100);
     // println!("The secret number is: {secret_number}");
 
     loop {
@@ -29,7 +29,21 @@ fn main() {
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
                 println!("You win!");
-                break;
+                println!("Also Janne is a QT3.14!");
+                println!("Would you like to play again? (yes/no)");
+                let mut answer = String::new();
+                io::stdin()
+                    .read_line(&mut answer)
+                    .expect("Failed to read line");
+
+                match answer.trim() {
+                    "no" => break,
+                    _ => {
+                        secret_number = rand::thread_rng().gen_range(1..=100);
+                        println!("Guess the number!");
+                    },
+                }
+
             }
         }
 
