@@ -13,3 +13,6 @@
 2. Go through the interactive version of the book at a regular pace
 3. Follow along the interactive book with the rustlings exercises
 4. learn some haskell to make the most of rust
+
+### Commands
+- cargo new [project name]
