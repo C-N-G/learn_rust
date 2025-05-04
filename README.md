@@ -17,3 +17,4 @@
 ### Commands
 - cargo new [project name] (creates a new project)
 - cargo run (runs the program)
+- cd rustlings && rustlings watch (runs rustlings)
